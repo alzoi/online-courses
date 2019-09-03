@@ -1,4 +1,11 @@
-# Курсы khanacademy.org
+# Курсы Khan Academy
+
+## Ссылки
+https://www.khanacademy.org/  
+https://ru.khanacademy.org/  
+https://www.youtube.com/user/khanacademy  
+https://www.youtube.com/user/KhanAcademyRussian  
+
 
 # Экономика и финансы  
 
