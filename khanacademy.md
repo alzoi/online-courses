@@ -17,5 +17,5 @@ https://www.youtube.com/user/KhanAcademyRussian
 
 
 [6 Граница, кривая производственных возможностей (Production possibilities curve)](https://www.youtube.com/watch?v=mMah5Uvzghk)  
-[7 Альтернативные издержки, косвенные затраты (Opportunity cost)](https://www.youtube.com/watch?v=cISzJ9RqZsg)
+[7 Альтернативные издержки, косвенные затраты (Opportunity cost)](https://www.youtube.com/watch?v=cISzJ9RqZsg)  
 [8 Увеличение альтернативных издержек, косвенных затрат (Increasing opportunity cost)](https://www.youtube.com/watch?v=60qd5T0nioo)  
