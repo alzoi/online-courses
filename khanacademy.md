@@ -16,4 +16,5 @@ https://www.youtube.com/user/KhanAcademyRussian
 [5 Экономические модели (Economic models)](https://www.youtube.com/watch?v=kNHBDaBhJGo&t=4s)
 
 
-[6 Граница производственных возможностей (Production possibilities frontier)](https://www.youtube.com/watch?v=mMah5Uvzghk)  
+[6 Граница, кривая производственных возможностей (Production possibilities curve)](https://www.youtube.com/watch?v=mMah5Uvzghk)  
+[7 Альтернативные издержки, затраты (Opportunity cost)](https://www.youtube.com/watch?v=cISzJ9RqZsg)
