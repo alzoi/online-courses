@@ -14,3 +14,6 @@ https://www.youtube.com/user/KhanAcademyRussian
 [3 Четыре фактора производства (Four factors of production) EN](https://www.youtube.com/watch?v=-IvwoqPh1_I)  
 [4 Позитивные и нормативные утверждения в экономике (Normative and positive statements)](https://www.youtube.com/watch?v=a4Py5XKA5bE)  
 [5 Экономические модели (Economic models)](https://www.youtube.com/watch?v=kNHBDaBhJGo&t=4s)
+
+
+[6 Граница производственных возможностей (Production possibilities frontier)](https://www.youtube.com/watch?v=mMah5Uvzghk)  
