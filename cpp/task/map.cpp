@@ -5,7 +5,7 @@
 
 int main() {
 
-	// Словарь (таблица: ключ и значение для этого ключа).
+	// Словарь (таблица: ключ и значение для этого ключа, все ключи уникальные).
 	std::map<unsigned long long int, int> t_dat1;
 	// Итератор по словарю.
 	std::map<unsigned long long int, int>::iterator itr;
