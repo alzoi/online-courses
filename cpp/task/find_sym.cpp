@@ -14,7 +14,7 @@ int main() {
     std::ifstream      file("input.txt");
     std::ofstream      file_out;
     std::string        line;
-    int                target, value, k3;
+    int                target, value, sum;
     std::multiset<int> mst;
 
     file_out.open("output.txt");
@@ -43,10 +43,10 @@ int main() {
     it2--;
 
     while (it1 != it2) {
-        k3 = *it1 + *it2;
-        if (k3 < target) {
+        sum = *it1 + *it2;
+        if (sum < target) {
             it1++;
-        } else if (k3 > target) {
+        } else if (sum > target) {
             it2--;
         } else {
             file_out << "1";
