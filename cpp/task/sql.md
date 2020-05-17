@@ -9,8 +9,8 @@ SELECT goods_id AS id, name FROM tags_goods
 	GROUP BY goods_id
 	HAVING COUNT(tag_id) = (
 		SELECT COUNT(goods_id) AS cnt FROM tags_goods
-		GROUP BY goods_id
-		ORDER BY cnt DESC
-        	LIMIT 1
+			GROUP BY goods_id
+			ORDER BY cnt DESC
+        		LIMIT 1
 	)
 ```
