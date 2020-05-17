@@ -11,6 +11,6 @@ SELECT goods_id AS id, name FROM tags_goods
 		SELECT COUNT(goods_id) AS cnt FROM tags_goods
 		GROUP BY goods_id
 		ORDER BY cnt DESC
-        LIMIT 1
+        	LIMIT 1
 	)
 ```
