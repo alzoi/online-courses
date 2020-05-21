@@ -13,13 +13,15 @@ import (
 	"math/rand"
 )
 
-func getInputChan(numbers []int) <-chan int {
+//func getInputChan(numbers []int) <-chan int {
+func getInputChan(numbers ...int) <-chan int {
 
 	input := make(chan int, 100)
 
 	// В отдельной горутине выполняем отправку данных массива в канал.
 	go func() {
-		for _, num := range numbers {
+		//for _, num := range numbers {
+		for num := range numbers {
 			input <- num
 			time.Sleep(time.Duration(rand.Intn(50)) * time.Millisecond)
 		}
