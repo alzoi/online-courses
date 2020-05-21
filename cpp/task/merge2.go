@@ -67,24 +67,27 @@ func merge(outputsChan ...<-chan int) <-chan int {
 }
 
 func main() {
-	chan1 := getInputChan([]int{1, 1, 1, 1, 1, 1, 1, 1, 1})	
+	n1 := []int{1, 1, 1, 1, 1, 1, 1, 1, 1}
+	n2 := []int{2, 2, 2, 2, 2, 2, 2, 2, 2}
+
+	chan1 := getInputChan(n1)	
 	fmt.Print("Два канала последовательно: ")
-  for num := range chan1 {
-  	fmt.Print(num, ", ")
-  }
-	chan2 := getInputChan([]int{2, 2, 2, 2, 2, 2, 2, 2, 2})	
-  for num := range chan2 {
-  	fmt.Print(num, ", ")
-  }
-	
+	for num := range chan1 {
+		fmt.Print(num, ", ")
+	}
+	chan2 := getInputChan(n2)	
+	for num := range chan2 {
+		fmt.Print(num, ", ")
+	}
+
 	fmt.Println()
 	fmt.Print("Два объединённых канала:    ")
-	chan1  = getInputChan([]int{1, 1, 1, 1, 1, 1, 1, 1, 1})	
-	chan2  = getInputChan([]int{2, 2, 2, 2, 2, 2, 2, 2, 2})	
-  chan3 := merge(chan1, chan2)
+	chan1  = getInputChan(n1)	
+	chan2  = getInputChan(n2)	
+	chan3 := merge(chan1, chan2)
 
-  for num := range chan3 {
-  	fmt.Print(num, ", ")
-  }
+	for num := range chan3 {
+		fmt.Print(num, ", ")
+	}
 
 }
