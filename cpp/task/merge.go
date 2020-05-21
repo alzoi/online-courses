@@ -14,7 +14,7 @@ func getInputChan() <-chan int {
 
 	// В отдельной горутине выполняем отправку данных массива в канал.
 	go func() {
-		for num := range numbers {
+		for _, num := range numbers {
 			input <- num
 		}
 		close(input)
