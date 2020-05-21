@@ -1,4 +1,8 @@
-// Объединение каналов в один.
+// Объединение двух каналов в один.
+
+// Вывод:
+// Два канала последовательно: 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
+// Два объединённых канала:    1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 1, 1, 2, 1, 2, 
 
 package main
 
@@ -63,13 +67,24 @@ func merge(outputsChan ...<-chan int) <-chan int {
 }
 
 func main() {
-	chan1 := getInputChan([]int{1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25})	
-	chan2 := getInputChan([]int{0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24})	
-
+	chan1 := getInputChan([]int{1, 1, 1, 1, 1, 1, 1, 1, 1})	
+	fmt.Print("Два канала последовательно: ")
+  for num := range chan1 {
+  	fmt.Print(num, ", ")
+  }
+	chan2 := getInputChan([]int{2, 2, 2, 2, 2, 2, 2, 2, 2})	
+  for num := range chan2 {
+  	fmt.Print(num, ", ")
+  }
+	
+	fmt.Println()
+	fmt.Print("Два объединённых канала:    ")
+	chan1  = getInputChan([]int{1, 1, 1, 1, 1, 1, 1, 1, 1})	
+	chan2  = getInputChan([]int{2, 2, 2, 2, 2, 2, 2, 2, 2})	
   chan3 := merge(chan1, chan2)
 
   for num := range chan3 {
-  	fmt.Println(num)
+  	fmt.Print(num, ", ")
   }
 
 }
