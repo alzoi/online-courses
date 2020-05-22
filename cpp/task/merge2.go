@@ -22,6 +22,7 @@ func getInputChan(numbers []int) <-chan int {
 	go func() {
 		for _, num := range numbers {
 			input <- num
+			rand.Seed(time.Now().UTC().UnixNano())			
 			time.Sleep(time.Duration(rand.Intn(50)) * time.Millisecond)
 		}
 		close(input)
