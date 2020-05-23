@@ -1,3 +1,11 @@
+// Вывод:
+// === Сумма чисел из двух каналов
+// 35,45,38,45,35,41,40,45,36,
+// === Канал 1
+// 13,12,18,19,17,16,15,14,11,
+// === Канал 2
+// 22,29,27,26,28,24,23,21,25,
+
 package main
 
 import (
@@ -8,6 +16,7 @@ import (
 )
 
 func getInputChan(numbers []int, test chan int) <-chan int {
+// Генератор данных для канала.
 	var wg sync.WaitGroup
 	
 	input := make(chan int, 100)
@@ -35,6 +44,7 @@ func getInputChan(numbers []int, test chan int) <-chan int {
 }
 
 func ff(n int) int {
+// Функция обработки данных.
 	rand.Seed(time.Now().UTC().UnixNano())
 	time.Sleep(time.Duration(rand.Intn(1000)) * time.Millisecond)
 	return n
@@ -106,12 +116,16 @@ func Merge2PS(f func(int) int, in1 <-chan int, in2 <-chan int, out chan<- int, n
 func main() {
 	d1 := make(chan int, 100)
 	d2 := make(chan int, 100)
+	
+	// Выходной канал.
 	c3 := make(chan int)
-
+	
+	// Данные для входных каналов.
 	c1 := getInputChan([]int{11,12,13,14,15,16,17,18,19}, d1)
 	c2 := getInputChan([]int{21,22,23,24,25,26,27,28,29}, d2)
 	
 	Merge2(ff, c1, c2, c3, 9)
+	
 	fmt.Println("=== Сумма чисел из двух каналов")	
 	for c := range c3 {
 		fmt.Print(c, ",")
