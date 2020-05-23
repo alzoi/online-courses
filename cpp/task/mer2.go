@@ -55,9 +55,11 @@ func Merge2(f func(int) int, in1 <-chan int, in2 <-chan int, out chan<- int, n i
 			 ch1 = append(ch1, make(chan int))
 			 ch2 = append(ch2, make(chan int))
 		}
+		// Добавляем в группу n элементов синхронизации.
 		wg.Add(n)
 
 		go func(){
+			// Ждём завершения всех задач синхронизации.
 			wg.Wait()
 			close(out)	
 		}()
@@ -65,6 +67,7 @@ func Merge2(f func(int) int, in1 <-chan int, in2 <-chan int, out chan<- int, n i
 		for i:=0; i<n; i++ {
 			go func(p_k int){
 				out <- f(<-ch1[p_k]) + f(<-ch2[p_k])
+				// Очередное задание из группы синхронизации выполнено.
 				wg.Done()
 			}(i)
 		}
